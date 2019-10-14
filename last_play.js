@@ -21,6 +21,5 @@ else{
     alert_disp+="最終プレイ日時:"+last_play_time+"\n";
     if(diffDay==0) alert_disp+="24時間以内にプレイしました";
     else alert_disp+=diffDay+"日前にプレイしました";
-    }
     alert(alert_disp);
 }
