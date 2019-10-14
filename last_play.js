@@ -10,11 +10,15 @@ else{
     xmlHttp.send(null);
     var data=JSON.parse(xmlHttp.responseText);
     var last_play_time;
-  console.log(data.music_list.length);
     for(var i=0;i<data.music_list.length;i++){
        if(data.music_list[i].music_id==music_id) last_play_time=data.music_list[i].last_play_time;
     }
     var alert_disp="";
+    var now=new Date();
+    var last=new Date(last_play_time);
+    var diffTime = now.getTime() - last.getTime();
+    var diffDay = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+    console.log(diffDay);
     alert_disp+="最終プレイ日時:"+last_play_time;
     alert(alert_disp);
 }
