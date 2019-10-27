@@ -6,7 +6,7 @@ if(match==null){
 else{
     const music_id=href.replace(/[^0-9]/g,'');
     var xmlHttp=new XMLHttpRequest();
-    xmlHttp.open("GET","https://mypage.groovecoaster.jp/sp/json/music_list.php",false);
+    xmlHttp.open("GET","https://mypage.groovecoaster.jp/sp/json/friend_music_list.php?hash=7a80ace43a59313f004c8da2a3c982fdaeb2853ea0209e8145532093206825cd",false);
     xmlHttp.send(null);
     var data=JSON.parse(xmlHttp.responseText);
     var last_play_time,music_title;
