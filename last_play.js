@@ -1,10 +1,11 @@
 const href=location.href;
 var match=href.match("https://mypage.groovecoaster.jp/sp/#/mc/");
-if(match==null){
+if(match!=null){
     alert("リザルト画面で実行してください");
 }
 else{
-    const music_id=href.replace(/[^0-9]/g,'');
+    //const music_id=href.replace(/[^0-9]/g,'');
+     const music_id=438;
     var xmlHttp=new XMLHttpRequest();
     xmlHttp.open("GET","https://mypage.groovecoaster.jp/sp/json/friend_music_list.php?hash=7a80ace43a59313f004c8da2a3c982fdaeb2853ea0209e8145532093206825cd",false);
     xmlHttp.send(null);
