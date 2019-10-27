@@ -23,6 +23,7 @@ else{
     var last=new Date(last_play_time);
     var diffTime = now.getTime() - last.getTime();
     var diffDay = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+    console.log(DiffDay);
     alert_disp+="最終プレイ日時:"+last_play_time+"\n";
     if(diffDay==0) alert_disp+="24時間以内にプレイしました";
     else alert_disp+=diffDay+"日前にプレイしました";
